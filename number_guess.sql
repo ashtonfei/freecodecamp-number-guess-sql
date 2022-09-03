@@ -48,10 +48,9 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.games (
-    username character varying NOT NULL,
+    username character varying(40) NOT NULL,
     games_played integer DEFAULT 0,
-    best_game integer DEFAULT 0,
-    CONSTRAINT username_length_check CHECK ((length((username)::text) >= 22))
+    best_game integer DEFAULT 0
 );
 
 
@@ -61,7 +60,14 @@ ALTER TABLE public.games OWNER TO freecodecamp;
 -- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.games VALUES ('ashtonfei_freecodecamp', 5, 10);
+INSERT INTO public.games VALUES ('linghuchong_freecodecamp', 1, 8);
+INSERT INTO public.games VALUES ('ashtonfei_freecodecamp', 3, 6);
+INSERT INTO public.games VALUES ('user_1662224332748', 2, 293);
+INSERT INTO public.games VALUES ('user_1662224332749', 5, 21);
+INSERT INTO public.games VALUES ('user_1662224336239', 2, 888);
+INSERT INTO public.games VALUES ('user_1662224336240', 5, 384);
+INSERT INTO public.games VALUES ('user_1662224379337', 2, 346);
+INSERT INTO public.games VALUES ('user_1662224379338', 5, 251);
 
 
 --
